@@ -1,2 +1,2 @@
 # QR_CODE
-shahram qr code project
+Shahram qr code project
