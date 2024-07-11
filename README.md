@@ -1,4 +1,4 @@
 # QR_CODE
 Shahram QR code project
 <br>
-this is my first project
+This is my first project
