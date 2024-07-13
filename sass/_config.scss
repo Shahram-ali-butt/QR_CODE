@@ -1,0 +1,85 @@
+// asign txt color and background color according to classes
+$colors:(
+    "white": #ffffff,
+    "light-gray": hsl(212, 45%, 89%),
+    "light-gray2": hsl(212, 7%, 51%),
+    "grayish-blue": hsl(220, 15%, 55%),
+    "dark-blue": hsl(218, 44%, 22%), 
+);
+
+@each $key, $val in $colors{
+    .txt-#{$key}{
+        color: $val;
+    };
+
+    .bg-#{$key}{
+        background-color: $val;
+    };
+
+    @for $i from 1 through 9{
+        //lighten the color
+        .txt-#{$key}-light-#{$i}{
+            .txt-#{$key}{
+                color: mix(white, $val, $i * 10);
+            };      
+        };
+
+        .bg-#{$key}-light-#{$i}{
+            background-color: mix(white, $val, $i * 10);
+        };
+        
+        //darken the color
+        .txt-#{$key}-dark-#{$i}{
+            .txt-#{$key}{
+                color: mix(black, $val, $i * 10);
+            };      
+        };
+
+        .bg-#{$key}-dark-#{$i}{
+            background-color: mix(black, $val, $i * 10);
+        };
+
+    };
+}
+
+
+// asign font weights using a function 
+$weights: (
+    "regular": 400,
+    "medium": 500,
+    "bold": 700
+);
+
+@function weight($weight-name){
+    @return map-get($weights, $weight-name) 
+};
+
+@each $key, $val in $weights{
+    .txt-#{$key}{
+        color: $val;
+    };
+}
+
+
+// wraped flex center in a mixin
+@mixin flex-center($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+};
+
+
+// media queries
+$widths:(
+    "small": 375px,
+    "large": 1440px,
+);
+
+@mixin largesc($large: map-get($widths, large)) {
+  @media (min-width: $large){
+    @content
+  }
+};
+
+
