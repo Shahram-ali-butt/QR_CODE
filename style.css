@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Outfit", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color:  hsl(212, 45%, 89%);
+  }
+
+a{
+    text-decoration: none;
+}  
+
+  .card {
+    width: 18em;
+    height: 28em;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* example background color */
+  }
+  
+  .qr-img {
+    width: 16em;
+    height: auto;
+    border-radius: 9px;
+  }
+  
+  .h1 {
+    padding-top: 1em;
+    font-size: 1.25rem;
+    width: 13em;
+    text-align: center;
+    color: hsl(218, 44%, 22%);
+  }
+  
+  .p {
+    padding: 1em 0 1em 0 ;
+    font-size: 0.92rem;
+    width: 17em;
+    text-align: center;
+    color: hsl(212, 7%, 51%);
+  }
+  
+  .footer {
+    position: absolute;
+    bottom: -1em;
+  }
+  
