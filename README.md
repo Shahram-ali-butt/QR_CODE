@@ -23,7 +23,7 @@ It is a very basic single card structure. It uses only HTML and CSS. Doesn't req
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [https://shahram-ali-butt.github.io/QR_CODE/]
+- Live Site URL: [Add live site URL here](https://shahram-ali-butt.github.io/QR_CODE/)
 ### Built with
 
 - Semantic HTML5 markup
